@@ -1,0 +1,34 @@
+.wrapper {
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.insert-afd , .insert-ap {
+    background-color: var(--cloud);
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30vw;
+    height: 22vw;
+    overflow: auto;
+}
+.insert-afd a, .insert-ap a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--black-fg);
+}
+
+.seleccion-number {
+    margin: 0px 50px 0px 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+}
+.seleccion-title {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}

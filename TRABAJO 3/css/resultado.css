@@ -1,0 +1,40 @@
+.previous-page, .home-page {
+    position: absolute;
+    background-color: var(--cloud);
+    top: 7vw;
+    padding: 10px;
+    border-radius: 8px;
+}
+.previous-page {
+    left: 2vw;
+}
+.home-page {
+    left: 90%;
+}
+
+.operacion {
+    background-color: var(--cloud);
+    padding: 30px;
+    border-radius: 10px;
+    width: 65%;
+    transform: translate(20%,50px);
+    margin: 0 30px 40px;
+}
+.operacion h2 {
+    margin-bottom: 20px;
+    padding: 10px 15px 5px;
+    border-bottom: 2px solid rgba(55,55,55,0.1);
+}
+.resultado {
+    height: 350px;
+    overflow: auto;
+}
+
+.resultado-wrap {
+    height: 100%;
+}
+
+.extension{
+    height: 60px;
+    width: 100%;
+}

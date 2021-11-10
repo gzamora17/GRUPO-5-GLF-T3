@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatas</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/arturo.svg">
+    <!-- Fonts: .. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,800;1,300&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Imports -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/insert.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script defer src="js/ap.js"></script>
+    <script defer src="js/popup.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="icons/arturo.svg" alt="logo" width="50" height="50">
+        <h1>Autómatas</h1>
+    </div>
+    <div class="previous-page">
+        <a href="index.html">
+            <img src="icons/previous.svg" alt="logo" width="15" height="15">
+            <span>Volver</span>
+        </a>
+    </div>
+    <div class="title" id="titulo">
+        <h1>Insertar Automata de Pila</h1>
+    </div>
+    <div class="afd-wrap">
+        <div class="formulario">
+            <div class="sub-form">
+                <h2>Tamaño del alfabeto</h2>
+                <input type="number" id="size-alfabeto" name="automata" autocomplete="off" value="1" min="1" required>
+            </div>
+            <div class="form-ap">
+                <h2>Cantidad de estados</h2>
+                <div class="sub-form-ap">
+                    <p>Autómata 1:</p>
+                    <input type="number" id="estadosA1" name="automata" autocomplete="off" value="1" min="1" required>
+                </div>
+                <div class="sub-form-ap">
+                    <p>Autómata 2:</p>
+                    <input type="number" id="estadosA2" name="automata" autocomplete="off" value="1" min="1" required>
+                </div>
+            </div>
+            <div class="sub-form transicion">
+                <h2>Insertar transiciones</h2>
+                <button type="button" data-popup-target="#popupA1" onclick="transicionesAP(true)">Automata 1</button>
+                <button type="button" data-popup-target="#popupA2" onclick="transicionesAP(false)">Automata 2</button>
+            </div>
+        </div>
+        <!-- Muestra el popup para ingresar transiciones -->
+        <div class="popup" id="popupA1">
+            <div class="popup-header">
+                <h1>Transiciones de estado</h1>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="transicion-formulario">
+                    <div id="transicion-input1"></div>
+                </div>
+                <!-- Submit -->
+                <div class="transicion-submit">
+                    <button type="button" data-close-button onclick="InsertarTrancionespila(true)">Finalizar</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="popupA2">
+            <div class="popup-header">
+                <h1>Transiciones de estado</h1>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="transicion-formulario">
+                    <div id="transicion-input2"></div>
+                </div>
+                <!-- Submit -->
+                <div class="transicion-submit">
+                    <button type="button" data-close-button onclick="InsertarTrancionespila(false)">Finalizar</button>
+                </div>
+            </div>
+        </div>
+        <div class="tablero">
+            <table>
+                <caption>Informaci&oacuten</caption>
+                <tr>
+                    <th scope="col">Alfabeto</th>
+                    <th scope="col">Estados 1</th>
+                    <th scope="col">Estados 2</th>
+                </tr>
+                <tbody id="tabla-automataAP"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="next-page">
+        <a href="resultado-ap.html">
+            <button>Continuar</button>
+        </a>
+    </div>
+</body>
+</html>

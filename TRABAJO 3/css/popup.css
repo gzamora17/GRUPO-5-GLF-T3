@@ -1,0 +1,50 @@
+.popup {
+    position: fixed;
+    border-radius: 10px;
+    padding: 20px 30px;
+    transform: translate(-45%, 90%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: var(--black-fg);
+    color: var(--white-fg);
+    z-index: 99;
+    width: 600px;
+}
+
+.popup.active {
+    transform: translate(-45%, -28%) scale(1);
+    pointer-events: all;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+.popup-body {
+    font-family: 'Source Sans Pro', sans-serif;
+    display:flex;
+    flex-direction: column;
+    min-height: 100px;
+    max-height: 78vh;
+}
+.transicion-formulario {
+    overflow: auto;
+}
+.transicion-submit {
+    margin-top: 15px;
+    text-align: center;
+}
+.transicion-submit button {
+    background-color: var(--white-fg);
+    color: var(--black-fg);
+    border: none;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: .84em;
+    font-weight: bold;
+}

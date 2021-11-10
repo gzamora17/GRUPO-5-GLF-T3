@@ -1,0 +1,91 @@
+.previous-page {
+    position: absolute;
+    background-color: var(--cloud);
+    top: 7vw;
+    padding: 10px;
+    border-radius: 8px;
+}
+.previous-page {
+    left: 2vw;
+}
+.next-page {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 3vw;
+}
+.next-page button {
+    background-color: white;
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+}
+
+
+.afd-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin: 5vw 0px 2vw;
+}
+
+.sub-form {
+    background-color: var(--cloud);
+    transform: translate(20%,0%);
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0px;
+    border-radius: 8px;
+    width: 360px;
+    height: 130px;
+}
+#size-alfabeto, #estadosA, #etiquetasA {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid var(--blue);
+    width: 60%;
+    height: 35px;
+}
+
+.transicion button {
+    margin-top: 30px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    height: 35px;
+    padding: 10px;
+}
+
+.form-ap {
+    width: 360px;
+    height: 170px;
+    margin-bottom: 40px;
+    padding: 20px 0px;
+    background-color: var(--cloud);
+    border-radius: 8px;
+    text-align: center;
+    transform: translate(20%,0%);
+}
+
+.sub-form-ap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 35px;
+}
+#estadosA1, #estadosA2, #etiquetasA1, #etiquetasA2 {
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid var(--blue);
+    width: 40%;
+}
+
+table {
+    transform: translate(-20%,0%);
+}

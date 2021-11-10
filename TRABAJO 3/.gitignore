@@ -1,0 +1,12 @@
+# Sonar Scanner
+sonar-project.properties
+.scannerwork
+
+# Visual Studio Code
+.vscode
+
+# Temp files
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatas</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icons/arturo.svg">
+    <!-- Fonts: 'Open Sans', 'Roboto Condensed' -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;0,800;1,300&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Imports -->
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/resultado.css">
+    <script defer src="js/resultado-ap.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="icons/arturo.svg" alt="logo" width="50" height="50">
+        <h1>Autómatas</h1>
+    </div>
+    <div class="previous-page">
+        <a href="insert-ap.html">
+            <img src="icons/previous.svg" alt="previous-page" width="15" height="15">
+            <span>Volver</span>
+        </a>
+    </div>
+    <div class="home-page">
+        <a href="index.html">
+            <img src="icons/home.svg" alt="home-page" width="15" height="15">
+            <span>Inicio</span>
+        </a>
+    </div>
+    <div class="title">
+        <h1>Resultado</h1>
+    </div>
+    <div class="resultado-wrap">
+        <div class="operacion">
+            <h2>Uni&oacuten de automatas</h2>
+            <div class="resultado">
+                <div id="union"></div>
+                <table>
+                    <caption>Informaci&oacuten</caption>
+                    <tr>
+                        <th scope="col">Inicio</th>
+                        <th scope="col">Termino</th>
+                        <th scope="col">Alfabeto</th>
+                        <th scope="col">Extraido</th>
+                        <th scope="col">Añadido</th>
+                    </tr>
+                    <tbody id="unionTable"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="operacion">
+            <h2>Concatenaci&oacuten de automatas</h2>
+            <div class="resultado">
+                <div id="concatenacion"></div>
+                <table>
+                    <caption>Informaci&oacuten</caption>
+                    <tr>
+                        <th scope="col">Inicio</th>
+                        <th scope="col">Termino</th>
+                        <th scope="col">Alfabeto</th>
+                        <th scope="col">Extraido</th>
+                        <th scope="col">Añadido</th>
+                    </tr>
+                    <tbody id="concatenacionTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="extension"></div>
+</body>
+</html>
