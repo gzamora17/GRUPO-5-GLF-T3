@@ -1,0 +1,6 @@
+projectKey=GRUPO-5-GLF-T3
+serverUrl=http://localhost:9000
+serverVersion=9.0.1.46107
+dashboardUrl=http://localhost:9000/dashboard?id=GRUPO-5-GLF-T3
+ceTaskId=AX0M08TlpY8jtKv97hPi
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX0M08TlpY8jtKv97hPi
