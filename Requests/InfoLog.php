@@ -6,6 +6,8 @@ $formulario = json_decode(file_get_contents('php://input'), true);
 $directorio = 'LOGS';
 $path = 'LOGS/Informativo.log';
 $alfabeto = 'alfabeto';
+$EstadoInicial = 'EstadoInicial';
+$EstadoFinal = 'EstadoFinal' ;
 
 if($formulario[$alfabeto]){
     if($formulario['afd']){
@@ -33,7 +35,7 @@ if($formulario[$alfabeto]){
             'Datos del automata( ',
             'El alfabeto: ', $formulario['alfabeto'],
             ' El estado Inicial: ', $formulario['EstadoInicial'],
-            ' El estado final: ', $formulario['EstadoFinal'],
+            ' Su estado final: ', $formulario['EstadoFinal'],
             ' AFND: ', $formulario['afnd'],
             ')'
         );
@@ -46,7 +48,7 @@ if($formulario[$alfabeto]){
         'Transiciones del Automata(',
         'El estado base: ', $formulario['EstadoBase'],
         ' El simbolo: ', $formulario['Simbolo'],
-        ' El estado final: ', $formulario['EstadoLlegada'],
+        ' Estado final: ', $formulario['EstadoTermino'],
     );
     $log->writeline('Info', implode($message));
 }

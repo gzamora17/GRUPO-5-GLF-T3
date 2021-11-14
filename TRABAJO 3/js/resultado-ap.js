@@ -16,9 +16,11 @@ function union (Estado_1, Estado_2, Alfabeto, Transiciones_1, Transiciones_2) {
     if (Alfabeto_neo.length != 0) {
         console.log("Alfabeto guardado con éxito");
         console.log(Alfabeto_neo);
+        peticionInfo(data, 'Alfabeto guardado con éxito');
     }
     else {
         console.error("No se pudo guardar el Alfabeto.");
+        peticionError(`No se pudo guardar el Alfabeto.`);
     }
 
     /** Estados */
@@ -35,6 +37,7 @@ function union (Estado_1, Estado_2, Alfabeto, Transiciones_1, Transiciones_2) {
     if (Estados_neo.length != 0) {
         console.log("Estados del Automata de Pila 1, guardados con éxito.");
         console.log(Estados_neo);
+        peticionInfo(data, 'Estados del Automata de Pila 1, guardados con éxito.');
 
         // Luego, procedemos con los Estados_2.
         aux = Estado_2.slice();
@@ -49,11 +52,13 @@ function union (Estado_1, Estado_2, Alfabeto, Transiciones_1, Transiciones_2) {
         if (Estados_neo.length == (Estado_1.length + Estado_2.length + 1)) {
             console.log("Estados del Automata de Pila 2, guardados con éxito.");
             console.log(Estados_neo);
+            peticionInfo(data, 'Estados del Automata de Pila 2, guardados con éxito.');
         }
     }
     else {
         console.error("Ocurrió un error. No se puede proceder.");
         alert("Ocurrió un error. No se puede proceder.")
+        peticionError(`Ocurrió un error. No se puede proceder.`);
     }
 
     /** Transiciones */
@@ -77,6 +82,7 @@ function union (Estado_1, Estado_2, Alfabeto, Transiciones_1, Transiciones_2) {
     if (Transicion_neo != 0) {
         console.log("Transiciones del Automata de Pila 1, guaradas con éxito.");
         console.log(Transicion_neo);
+        peticionInfo(data, 'Transiciones del Automata de Pila 1, guaradas con éxito.');
 
         aux = Transiciones_2.slice();
         for (let i = Transicion_neo.length; aux != 0; i++) {
@@ -87,11 +93,13 @@ function union (Estado_1, Estado_2, Alfabeto, Transiciones_1, Transiciones_2) {
         if (Transicion_neo.length == (Transiciones_1.length + Transiciones_2.length + 2)) {
             console.log("Transiciones del Automata de Pila 2, guardados con éxito.");
             console.log(Transicion_neo);
+            peticionInfo(data, 'Transiciones del Automata de Pila 2, guardados con éxito.');
         }
     }
     else {
         console.error("Ocurrió un error. No se puede proceder.");
         alert("Ocurrió un error. No se puede proceder");
+        peticionError(`Ocurrió un error. No se puede proceder.`);
     }
 
     /** Finalización */
@@ -272,3 +280,7 @@ function Concatenacion (Estado_1, Estado_2, Alfabeto, Transicion_1, Transicion_2
 // Se auto-inician
 union(estado1, estado2, alfabeto, T1, T2);
 Concatenacion(estado1, estado2, alfabeto, T1, T2);
+
+catch (e) {
+    peticionError(`FALLO' ${e}`);
+}

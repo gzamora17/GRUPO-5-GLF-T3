@@ -31,9 +31,12 @@ function InsertarAlfabeto(){
         console.log("alfabeto agregado correctamente");
         console.log(alfabeto);
         localStorage.setItem('alfabeto', JSON.stringify(alfabeto));
+        peticionInfo(data, 'alfabeto agregado correctamente');
+
     }else{
        console.error("Debe ingresar un número mayor a 1 y menor a 702");
        alert("Debe ingresar un número mayor a 1 y menor a 702");
+       peticionError(`Debe ingresar un número mayor a 1 y menor a 702`);
     }
 }
 
@@ -49,6 +52,7 @@ function InsertarEstadosAFD(){
     }else{
         console.error("numero debe ser mayor que 0");
         alert("numero debe ser mayor que 0");
+        peticionError(`numero debe ser mayor que 0`);
     }
 
     if(validacion==true){
@@ -59,6 +63,7 @@ function InsertarEstadosAFD(){
         console.log("Estados ingresados correctamente");
         console.log(AFDEST);
         localStorage.setItem('estado', JSON.stringify(AFDEST));
+        peticionInfo(data, 'Estados ingresados correctamente');
     }
 
 }
@@ -95,6 +100,7 @@ function InsertarEtiquetas(){
         console.log("las etiquetas se actualizado adecuadamente");
         console.log(AFDEST);
         localStorage.setItem('estado', JSON.stringify(AFDEST));
+        peticionInfo(data, 'las etiquetas se actualizado adecuadamente');
     }
 }
 
@@ -148,18 +154,22 @@ function InsertarTrancionesAFD(){
                 }else{
                     console.error("estado de transicion no presente en los ingresados previamente");
                     alert("estado de transicion no presente en los ingresados previamente");
+                    peticionError(`estado de transicion no presente en los ingresados previamente`);
                 }
             }else{
                 console.error("número de veces que se uso cada elemento del alfabeto no corresponde con el tipo de automata");
                 alert("número de veces que se uso cada elemento del alfabeto no corresponde con el tipo de automata");
+                peticionError(`número de veces que se uso cada elemento del alfabeto no corresponde con el tipo de automata`);
             }
         }else{
             console.error("número de transiciones no correspondiente con el tipo de automata");
             alert("número de transiciones no correspondiente con el tipo de automata");
+            peticionError(`número de transiciones no correspondiente con el tipo de automata`);
         }
     }else{
         console.error("número ingresado debe ser un numero mayor 0");
         alert("número ingresado debe ser un numero mayor 0");
+        peticionError(`numero debe ser mayor que 0`);
     }
 
     if(validacion == false){
@@ -168,6 +178,7 @@ function InsertarTrancionesAFD(){
         console.log("Las Transiciones se actualizado adecuadamente");
         console.log(AFDTRA);
         localStorage.setItem('transicion', JSON.stringify(AFDTRA));
+        peticionInfo(data, 'Las Transiciones se actualizado adecuadamente');
     }
 }
 
@@ -250,3 +261,6 @@ updateEtiquetasAFD.addEventListener("keydown", function () {
     InsertarEtiquetas();
     updateTableAFD();
 });
+catch (e) {
+    peticionError(`FALLO' ${e}`);
+}

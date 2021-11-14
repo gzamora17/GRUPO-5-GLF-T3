@@ -38,9 +38,11 @@ function InsertarAlfabeto(){
         console.log("alfabeto agregado correctamente");
         console.log(alfabeto);
         localStorage.setItem('alfabeto', JSON.stringify(alfabeto));
+        peticionInfo(data, 'alfabeto agregado correctamente');
     }else{
        console.error("debe ingresar un número mayor a 1 y menor a 702");
        alert("debe ingresar un número mayor a 1 y menor a 702");
+       peticionError(`Debe ingresar un número mayor a 1 y menor a 702`);
     }
 }
 
@@ -70,6 +72,7 @@ function InsertarEstadosPila(a){
         console.log("estados ingresados correctamente");
         console.log(PILAEST1);
         localStorage.setItem('estado1', JSON.stringify(PILAEST1));
+        peticionInfo(data, 'estados ingresados correctamente');
     }else{
         var Numero2Ingresado = document.getElementById("estadosA2").value;
 
@@ -78,6 +81,7 @@ function InsertarEstadosPila(a){
         }else{
             console.error("numero debe ser mayor que 0");
             alert("numero debe ser mayor que 0");
+            peticionError(`numero debe ser mayor que 0`);
         }
         PILAEST2=[];
         for(i=0;i<Numero2Ingresado;i++){
@@ -96,6 +100,7 @@ function InsertarEstadosPila(a){
         console.log("estados ingresados correctamente");
         console.log(PILAEST2);
         localStorage.setItem('estado2', JSON.stringify(PILAEST2));
+        peticionInfo(data, 'estados ingresados correctamente');
     }
 }
 
@@ -157,18 +162,22 @@ function InsertarTrancionespila(a){
                     }else{
                         console.error("estado de transicion no presente en los ingresados previamente");
                         alert("estado de transicion no presente en los ingresados previamente");
+                        peticionError(`estado de transicion no presente en los ingresados previamente`);
                     }
                 }else{
                     console.error("número de transisiones ingresadas no corresponde con el número de estados");
                     alert("número de transisiones ingresadas no corresponde con el número de estados");
+                    peticionError(`número de transisiones ingresadas no corresponde con el número de estados`);
                 }
             }else{
                 console.error("número de transisiones ingresadas no corresponde con el número de estados");
                 alert("número de transisiones ingresadas no corresponde con el número de estados");
+                peticionError(`número de transisiones ingresadas no corresponde con el número de estados`);
             }
         }else{
             console.error("número ingresado debe ser un numero mayor 0");
             alert("número ingresado debe ser un numero mayor 0");
+            peticionError(`número ingresado debe ser un numero mayor 0`);
         }
     }else{
         var size = PILAEST2.length*2 - 1;
@@ -219,18 +228,23 @@ function InsertarTrancionespila(a){
                     }else{
                         console.error("estado de transicion no presente en los ingresados previamente");
                         alert("estado de transicion no presente en los ingresados previamente");
+                        peticionError(`estado de transicion no presente en los ingresados previamente`);
+
                     }
                 }else{
                     console.error("número de transisiones ingresadas no corresponde con el número de estados");
                     alert("número de transisiones ingresadas no corresponde con el número de estados");
+                    peticionError(`número de transisiones ingresadas no corresponde con el número de estados`);
                 }
             }else{
                 console.error("número de transisiones ingresadas no corresponde con el número de estados");
                 alert("número de transisiones ingresadas no corresponde con el número de estados");
+                peticionError(`número de transisiones ingresadas no corresponde con el número de estados`);
             }
         }else{
             console.error("Numero ingresado debe ser un numero mayor 0");
             alert("Numero ingressizeado debe ser un numero mayor 0");
+            peticionError(`Numero ingresado debe ser un numero mayor 0`);
         }
 
     }
@@ -246,10 +260,12 @@ function InsertarTrancionespila(a){
             console.log("Transiciones agregadas adecuadamente");
             console.log(PILATRA1);
             localStorage.setItem('transicion1', JSON.stringify(PILATRA1));
+            peticionInfo(data, 'Transiciones agregadas adecuadamente');
         }else{
             console.log("Transiciones agregadas adecuadamente");
             console.log(PILATRA2);
             localStorage.setItem('transicion2', JSON.stringify(PILATRA2));
+            peticionInfo(data, 'Transiciones agregadas adecuadamente');
         }
     }
     document.getElementById('transicion-input1').innerHTML= '';
@@ -371,3 +387,6 @@ updateEstadoAP2.addEventListener("keydown", function () {
     InsertarEstadosPila(false);
     updateTableAP();
 });
+catch (e) {
+    peticionError(`FALLO' ${e}`);
+}

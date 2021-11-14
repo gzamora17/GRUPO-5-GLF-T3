@@ -378,4 +378,5 @@ function AFDtoER(Estado, Trans1, Alfabeto) {
     ERHTML.innerHTML= 'La expresión regular obtenida para el AFD ingresado es: <br>'+algoF;
 }
 
-AFDtoER(estado, transicion, alfabeto)
+AFDtoER(estado, transicion, alfabeto);
+
